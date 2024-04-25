@@ -1,14 +1,13 @@
 <template>
   <div class="pf-page">
     <div class="pf-content">
-      <Breadcrumb text="Contact Me" type="h1" />
+      <Breadcrumb text="Contact" type="h1" />
       <div class="pf-contentList">
         <div class="pf-columns">
           <img class="pf-portrait" src="/img/fra.png" alt="" />
 
           <p class="pf-facts">
-            <span>Lorem ipsum dolor sit amet.</span>
-            <span>Lorem ipsum dolor sit amet.</span>
+            <span>Let's get in touch!</span>
           </p>
         </div>
         <div class="pf-columns">
@@ -98,6 +97,8 @@ definePageMeta({
     font-style: normal;
     font-weight: 300;
     line-height: 120%;
+    display: grid;
+    align-content: center;
 
     @include mq($until: lg) {
       font-size: 32px;
@@ -136,9 +137,9 @@ definePageMeta({
     &:last-child {
       justify-self: end;
     }
-
     @include mq($until: lg) {
       width: 75%;
+      margin-inline: auto;
     }
   }
   .pf-email {

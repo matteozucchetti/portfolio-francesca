@@ -23,8 +23,8 @@ nuxtApp.hook("page:finish", () => {
 useSeoMeta({
   title: "Francesca Da Forno | Portfolio",
   ogTitle: "Francesca Da Forno | Portfolio",
-  description: "Senior Digital Art Director.",
-  ogDescription: "Senior Digital Art Director.",
+  description: "Senior Visual & UI Designer",
+  ogDescription: "Senior Visual & UI Designer",
 });
 
 useHead({

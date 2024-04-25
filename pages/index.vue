@@ -3,32 +3,32 @@
     <div class="pf-background" ref="background"></div>
 
     <NuxtLink
-      to="/about-me"
-      class="pf-tile about-me"
-      @mouseenter="(e) => !isMobile && onMouseOver(e, 'About me')"
+      to="/works"
+      class="pf-tile works"
+      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Works')"
     >
       <div>
-        <h2>About me</h2>
+        <h2>Works</h2>
       </div>
     </NuxtLink>
 
     <NuxtLink
-      to="/art"
-      class="pf-tile art"
-      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Art')"
+      to="/about"
+      class="pf-tile about"
+      @mouseenter="(e) => !isMobile && onMouseOver(e, 'About')"
     >
       <div>
-        <h2>Art</h2>
+        <h2>About</h2>
       </div>
     </NuxtLink>
 
     <NuxtLink
-      to="/contact-me"
-      class="pf-tile contact-me"
-      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Contact me')"
+      to="/contact"
+      class="pf-tile contact"
+      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Contact')"
     >
       <div>
-        <h2>Contact me</h2>
+        <h2>Contact</h2>
       </div>
     </NuxtLink>
   </div>
@@ -113,10 +113,10 @@ const onMouseOver = (e: MouseEvent, text: string) => {
   position: relative;
   padding: 20px;
   transition: all 0.5s;
-  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-areas: "works about" "works contact";
 
   @include mq($until: lg) {
-    grid-template-columns: 1fr;
+    grid-template-areas: "works" "about" "contact";
     grid-gap: 10px;
     padding: 10px;
   }
@@ -126,6 +126,7 @@ const onMouseOver = (e: MouseEvent, text: string) => {
     padding: 30px;
     display: grid;
     align-content: end;
+    justify-content: end;
     transition: background 0.15s ease;
     &:hover,
     &:focus {
@@ -139,17 +140,29 @@ const onMouseOver = (e: MouseEvent, text: string) => {
     h2 {
       color: #fff;
       font-family: Poppins;
-      font-size: 24px;
+      font-size: 16px;
       font-style: normal;
       font-weight: 800;
       line-height: normal;
+      text-transform: uppercase;
+      letter-spacing: 32%;
+      letter-spacing: 5.12px;
+
       span {
         font-weight: 400;
       }
+    }
 
-      @include mq($until: lg) {
-        font-size: 24px;
-      }
+    &.works {
+      grid-area: works;
+    }
+
+    &.about {
+      grid-area: about;
+    }
+
+    &.contact {
+      grid-area: contact;
     }
   }
 }

@@ -1,27 +1,30 @@
 <template>
-  <button @click="router.back()" class="pf-breadcrumb pf-back">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+  <button @click="smoothScrollToTop()" class="pf-breadcrumb pf-back">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
+      <rect width="40" height="40" fill="#404040" opacity=".7" rx="4" />
       <path
-        stroke="#fff"
-        stroke-width="4"
-        d="M1.506 22.568 22.719 1.354m-.213 21.566L1.293 1.707"
+        fill="#fff"
+        d="M19.819 18.363 12.181 26 10 23.819 19.819 14l9.818 9.819L27.455 26l-7.636-7.637Z"
       />
     </svg>
-    <span>Back</span>
   </button>
 </template>
 
 <script lang="ts" setup>
-const router = useRouter();
+const smoothScrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 </script>
 
 <style scoped lang="scss">
 @use "/assets/css/mq.scss" as *;
 
 .pf-breadcrumb {
-  display: inline-flex;
-  place-items: center;
-  gap: 15px;
+  float: right;
+  margin-bottom: 35px;
 
   &.pf-back {
     @include mq($from: lg) {
@@ -40,14 +43,9 @@ const router = useRouter();
     }
   }
   svg {
-    width: 16px;
-    height: 16px;
+    width: 35px;
+    height: 35px;
     transition: all 0.3s ease;
-  }
-  &:hover {
-    svg {
-      transform: rotate(90deg);
-    }
   }
 }
 </style>
