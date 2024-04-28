@@ -1,6 +1,6 @@
 <template>
   <div class="pf-breadcrumb">
-    <button @click="router.back()">
+    <button @click="routerBack()">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <path
           stroke="#fff"
@@ -21,6 +21,17 @@ defineProps<{
 }>();
 
 const router = useRouter();
+const route = useRoute();
+
+const routerBack = () => {
+  if (route.path === "/works") {
+    router.push("/");
+  } else if (route.path.includes("/works/")) {
+    router.push("/works");
+  } else {
+    router.back();
+  }
+};
 </script>
 
 <style scoped lang="scss">

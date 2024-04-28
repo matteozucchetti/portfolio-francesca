@@ -9,6 +9,15 @@
             <h2>{{ doc.subhead }}</h2>
             <ContentRenderer :value="doc" />
             <Back style="display: flex"></Back>
+
+            <div class="pf-navigation">
+              <NuxtLink v-if="next" :to="next._path">
+                Next: {{ next.title }}
+              </NuxtLink>
+              <NuxtLink v-if="prev" :to="prev._path">
+                Previous: {{ prev.title }}
+              </NuxtLink>
+            </div>
           </div>
         </template>
         <template #not-found> <h1>Document not found</h1> </template>
@@ -27,7 +36,11 @@ definePageMeta({
   },
 });
 
-const docTitle = ref<string | null>(null);
+const route = useRoute();
+
+const [prev, next] = await queryContent()
+  .only(["_path", "title"])
+  .findSurround(route.path);
 </script>
 
 <style scoped lang="scss">
@@ -77,6 +90,41 @@ const docTitle = ref<string | null>(null);
     line-height: 120%;
     text-wrap: pretty;
     margin-bottom: 40px;
+  }
+}
+
+.pf-navigation {
+  display: grid;
+  margin-top: 50px;
+  a {
+    color: #616161;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 5.12px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    transition: all 0.15s ease;
+    position: relative;
+    width: max-content;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: #fff;
+    }
+    &:hover {
+      color: #fff;
+      &:after {
+        width: 100%;
+        transition: all 0.3s ease;
+      }
+    }
   }
 }
 </style>

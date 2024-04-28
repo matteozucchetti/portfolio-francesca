@@ -47,5 +47,13 @@ const smoothScrollToTop = () => {
     height: 35px;
     transition: all 0.3s ease;
   }
+
+  &:hover {
+    svg {
+      rect {
+        fill: #606060;
+      }
+    }
+  }
 }
 </style>
