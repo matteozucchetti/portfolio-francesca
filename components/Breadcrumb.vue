@@ -14,11 +14,17 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-defineProps<{
-  text: string;
-  type: string;
-}>();
+<script setup>
+defineProps({
+  text: {
+    type: String,
+    required: true,
+  },
+  type: {
+    type: String,
+    required: true,
+  },
+});
 
 const router = useRouter();
 const route = useRoute();

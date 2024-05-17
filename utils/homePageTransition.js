@@ -1,23 +1,17 @@
 import gsap from "gsap";
 
-export const homeEnterTransition = (
-  el: {
-    querySelectorAll: (arg0: string) => any;
-    querySelector: (arg0: string) => any;
-  },
-  done: () => void
-) => {
+export const homeEnterTransition = (el, done) => {
   const tiles = el.querySelectorAll(".pf-tile");
   const background = el.querySelector(".pf-background");
 
-  tiles.forEach((tile: { style: { pointerEvents: string } }) => {
+  tiles.forEach((tile) => {
     tile.style.pointerEvents = "none";
   });
 
   const tl = gsap.timeline({
     onComplete: () => {
       done();
-      tiles.forEach((tile: { style: { pointerEvents: string } }) => {
+      tiles.forEach((tile) => {
         tile.style.pointerEvents = "all";
       });
     },
@@ -34,13 +28,7 @@ export const homeEnterTransition = (
   );
 };
 
-export const homeLeaveTransition = (
-  el: {
-    querySelectorAll: (arg0: string) => any;
-    querySelector: (arg0: string) => any;
-  },
-  done: () => void
-) => {
+export const homeLeaveTransition = (el, done) => {
   const tiles = el.querySelectorAll(".pf-tile");
   const clickedTile =
     el.querySelector(".pf-tile:focus") || el.querySelector(".pf-tile:hover");
@@ -59,7 +47,7 @@ export const homeLeaveTransition = (
     .timeline({
       onComplete: done,
       onStart: () => {
-        tiles.forEach((tile: { style: { pointerEvents: string } }) => {
+        tiles.forEach((tile) => {
           tile.style.pointerEvents = "none";
         });
       },

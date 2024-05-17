@@ -1,9 +1,6 @@
 import gsap from "gsap";
 
-export const enterTransition = (
-  el: { querySelector: (arg0: string) => any },
-  done: any
-) => {
+export const enterTransition = (el, done) => {
   const content = el.querySelector(".pf-contentList");
   const breadcrumb = el.querySelector(".pf-breadcrumb");
   const tl = gsap
@@ -20,7 +17,7 @@ export const enterTransition = (
     );
 };
 
-export const leaveTransition = (el: gsap.TweenTarget, done: any) => {
+export const leaveTransition = (el, done) => {
   if (window.scrollY !== 0) {
     gsap.to(el, { opacity: 0, duration: 0.3, onComplete: done });
     return;

@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import gsap from "gsap";
 
 const nuxtApp = useNuxtApp();

@@ -34,7 +34,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { Flip } from "gsap/Flip";
@@ -51,10 +51,10 @@ definePageMeta({
   },
 });
 
-const background = ref<HTMLElement | null>(null);
+const background = ref(null);
 
-const onMouseOver = (e: MouseEvent, text: string) => {
-  const targetElement = e.target as Element;
+const onMouseOver = (e, text) => {
+  const targetElement = e.target;
   const title = text ? text : targetElement.querySelector("h2")?.textContent;
 
   gsap.to(background.value, {

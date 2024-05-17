@@ -10,7 +10,7 @@
   </button>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 const smoothScrollToTop = () => {
   window.scrollTo({
     top: 0,
