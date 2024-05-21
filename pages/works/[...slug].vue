@@ -56,6 +56,27 @@ const [prev, next] = await queryContent()
     gap: 50px;
   }
 
+  :deep(img) {
+    border-radius: 20px;
+    @include mq($until: lg) {
+      border-radius: 5px;
+    }
+  }
+
+  :deep(video) {
+    width: 100%;
+  }
+
+  :deep(.pf-cta) {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   h1 {
     color: #fff;
     font-family: Montserrat;
@@ -79,6 +100,9 @@ const [prev, next] = await queryContent()
     text-transform: uppercase;
     margin-bottom: 40px;
     line-height: 1.2;
+    @include mq($until: lg) {
+      margin-bottom: 20px;
+    }
   }
 
   :deep(p) {
