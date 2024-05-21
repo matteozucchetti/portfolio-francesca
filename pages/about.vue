@@ -49,8 +49,26 @@
           </p>
         </div>
         <div class="pf-images">
-          <img src="https://picsum.photos/960/800" alt="" />
-          <img src="https://picsum.photos/960/800" alt="" />
+          <div class="col-grid">
+            <div class="col-1">
+              <img src="/img/about/portfolio-about-photo1.png" alt="" />
+              <img src="/img/about/portfolio-about-photo5.png" alt="" />
+            </div>
+            <div class="col-2">
+              <img src="/img/about/portfolio-about-photo2.png" alt="" />
+              <img src="/img/about/portfolio-about-photo3.png" alt="" />
+              <img src="/img/about/portfolio-about-photo6.png" alt="" />
+            </div>
+            <div class="col-1">
+              <img src="/img/about/portfolio-about-photo4.png" alt="" />
+              <img src="/img/about/portfolio-about-photo7.png" alt="" />
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="/img/about/portfolio-about-photo8.png" alt="" />
+            <img src="/img/about/portfolio-about-photo9.png" alt="" />
+            <img src="/img/about/portfolio-about-photo10.png" alt="" />
+          </div>
         </div>
       </div>
       <Back />
@@ -71,6 +89,21 @@ definePageMeta({
 
 <style scoped lang="scss">
 @use "/assets/css/mq.scss" as *;
+
+@mixin grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+@mixin gap {
+  gap: 50px;
+  @include mq($until: lg) {
+    gap: 10px;
+  }
+}
 
 .pf-contentList {
   height: 100%;
@@ -182,10 +215,45 @@ definePageMeta({
     }
   }
   .pf-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    @include mq($until: lg) {
-      grid-template-columns: 1fr;
+    img {
+      @include grayscale();
+    }
+    .col-3 {
+      display: grid;
+      grid-template-columns: 306fr 305fr 660fr;
+      @include gap();
+      img {
+        @include grayscale;
+      }
+    }
+    .col-grid {
+      display: grid;
+      grid-template-columns: 306fr 660fr 306fr;
+      @include gap();
+      margin-bottom: 50px;
+      @include mq($until: lg) {
+        margin-bottom: 10px;
+      }
+      img {
+        align-self: end;
+      }
+    }
+    .col-1 {
+      display: grid;
+      grid-template-rows: 500fr 360fr;
+      @include gap();
+      align-self: end;
+    }
+    .col-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      @include gap();
+      img {
+        &:nth-child(3) {
+          grid-column: span 2;
+        }
+      }
     }
   }
 }
