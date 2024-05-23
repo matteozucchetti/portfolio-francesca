@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@nuxt/image",
-    "nuxt-gtag",
     "@nuxtjs/sitemap",
   ],
   content: { contentHead: false },
