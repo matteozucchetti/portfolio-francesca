@@ -27,9 +27,6 @@ export default defineNuxtConfig({
   devServer: {
     host: "0.0.0.0",
   },
-  gtag: {
-    id: "G-CGSR4GB4GN",
-  },
   nitro: {
     prerender: {
       routes: ["/sitemap.xml"],
