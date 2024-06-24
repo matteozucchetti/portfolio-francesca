@@ -6,7 +6,7 @@
           <Breadcrumb :text="'WORKS | ' + doc.head" type="p" />
           <div class="pf-contentList">
             <h1>{{ doc.head }}</h1>
-            <h2>{{ doc.subhead }}</h2>
+            <h2>{{ doc.category }}</h2>
             <ContentRenderer :value="doc" />
             <Back style="display: flex"></Back>
 

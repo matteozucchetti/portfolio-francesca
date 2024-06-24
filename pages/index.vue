@@ -23,12 +23,12 @@
     </NuxtLink>
 
     <NuxtLink
-      to="/contact"
-      class="pf-tile contact"
-      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Contact')"
+      to="/contacts"
+      class="pf-tile contacts"
+      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Contacts')"
     >
       <div>
-        <h2>Contact</h2>
+        <h2>Contacts</h2>
       </div>
     </NuxtLink>
   </div>
@@ -113,10 +113,10 @@ const onMouseOver = (e, text) => {
   position: relative;
   padding: 20px;
   transition: all 0.5s;
-  grid-template-areas: "works about" "works contact";
+  grid-template-areas: "works about" "works contacts";
 
   @include mq($until: lg) {
-    grid-template-areas: "works" "about" "contact";
+    grid-template-areas: "works" "about" "contacts";
     grid-gap: 10px;
     padding: 10px;
   }
@@ -161,8 +161,8 @@ const onMouseOver = (e, text) => {
       grid-area: about;
     }
 
-    &.contact {
-      grid-area: contact;
+    &.contacts {
+      grid-area: contacts;
     }
   }
 }

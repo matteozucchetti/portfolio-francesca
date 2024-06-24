@@ -1,7 +1,7 @@
 <template>
   <div class="pf-page">
     <div class="pf-content">
-      <Breadcrumb text="Contact" type="h1" />
+      <Breadcrumb text="Contacts" type="h1" />
       <div class="pf-contentList">
         <div class="pf-columns">
           <img class="pf-portrait" src="/img/fra.png" alt="" />
@@ -27,7 +27,10 @@
               LinkedIn
             </a>
             <br /><br />
-            <a href="" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/francesca-da-forno-55312a119/"
+              target="_blank"
+            >
               Curriculum<br />Vitae<DownloadIcon />
             </a>
           </p>

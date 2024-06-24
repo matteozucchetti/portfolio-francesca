@@ -30,7 +30,11 @@ const router = useRouter();
 const route = useRoute();
 
 const routerBack = () => {
-  if (route.path === "/works") {
+  if (
+    route.path === "/works" ||
+    route.path === "/about" ||
+    route.path === "/contacts"
+  ) {
     router.push("/");
   } else if (route.path.includes("/works/")) {
     router.push("/works");

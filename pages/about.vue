@@ -17,17 +17,16 @@
         <div class="pf-columns">
           <div class="pf-body sticky">
             <p>
-              Hello! I'm Francesca, an experienced Visual & UI Designer with
-              over 14 years of experience. I create impactful landing pages,
-              lead digital initiatives, and organize team projects.<br /><br />I
-              ensure that clients are involved in every step of bringing their
-              ideas and graphic content to life. I excel at problem-solving,
-              translating client ideas into beautiful graphics, effective
-              communication, teamwork, and fostering creativity.<br /><br />I
-              love engaging in sports, traveling, reading, drawing, and watching
-              fantasy movies. These hobbies fuel me with fresh ideas and energy
-              for my work. My journey highlights my passion and dedication to
-              design.
+              Hello! I'm Francesca, a Visual & UI Designer with over 14 years of
+              experience. I create impactful landing pages, lead digital
+              initiatives, and organize team projects.<br /><br />I ensure that
+              clients are involved in every step of bringing their ideas and
+              graphic content to life. I excel at problem-solving, translating
+              client ideas into beautiful graphics, effective communication,
+              teamwork, and fostering creativity.<br /><br />I love engaging in
+              sports, traveling, reading, drawing, and watching fantasy movies.
+              These hobbies fuel me with fresh ideas and energy for my work. My
+              journey highlights my passion and dedication to design.
             </p>
           </div>
           <p class="pf-facts">
