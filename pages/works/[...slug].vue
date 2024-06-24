@@ -11,12 +11,9 @@
             <Back style="display: flex"></Back>
 
             <div class="pf-navigation">
-              <NuxtLink v-if="next" :to="next._path">
-                Next: {{ next.title }}
-              </NuxtLink>
-              <NuxtLink v-if="prev" :to="prev._path">
-                Previous: {{ prev.title }}
-              </NuxtLink>
+              <NuxtLink v-if="prev" :to="prev._path">Previous</NuxtLink>
+              <span v-if="prev && next">|</span>
+              <NuxtLink v-if="next" :to="next._path">Next</NuxtLink>
             </div>
           </div>
         </template>
@@ -119,8 +116,13 @@ const [prev, next] = await queryContent()
 
 .pf-navigation {
   display: grid;
+  grid-auto-flow: column;
   margin-top: 50px;
-  a {
+  width: max-content;
+  gap: 20px;
+  a,
+  span {
+    display: inline-block;
     color: #616161;
     font-family: Poppins;
     font-size: 16px;
@@ -129,11 +131,12 @@ const [prev, next] = await queryContent()
     line-height: normal;
     letter-spacing: 5.12px;
     text-transform: uppercase;
-    margin-bottom: 40px;
     line-height: 1.2;
     transition: all 0.15s ease;
     position: relative;
     width: max-content;
+  }
+  a {
     &:after {
       content: "";
       display: block;

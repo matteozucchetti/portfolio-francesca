@@ -8,7 +8,7 @@
             <NuxtLink
               :to="doc._path"
               class="pf-tile"
-              :style="'background-color:' + doc.color"
+              :style="'--bg:' + doc.color"
             >
               <div class="text">
                 <h2>{{ doc.head }}<br /></h2>
@@ -63,6 +63,12 @@ definePageMeta({
     padding: 33% 30px 0;
     display: grid;
     place-content: start;
+    background: #40404070;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      background-color: var(--bg);
+    }
 
     @include mq($until: xxl) {
       padding: 20px;
@@ -73,14 +79,13 @@ definePageMeta({
       place-content: center start;
     }
     .text {
-      transition: all 0.15s ease-in-out;
       h2 {
         color: #fff;
         font-family: Montserrat;
         font-size: 34px;
         font-style: normal;
         font-weight: 500;
-        line-height: 1.2;
+        line-height: 1;
         margin-bottom: 20px;
         text-wrap: balance;
         @include mq($until: xxl) {
@@ -101,12 +106,6 @@ definePageMeta({
         @include mq($until: xxl) {
           font-size: 14px;
         }
-      }
-    }
-
-    &:hover {
-      .text {
-        transform: translateY(-10px);
       }
     }
   }
