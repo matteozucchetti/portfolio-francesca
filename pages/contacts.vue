@@ -1,13 +1,13 @@
 <template>
   <div class="pf-page">
     <div class="pf-content">
-      <Breadcrumb text="Contacts" type="h1" />
+      <Breadcrumb text="Contatti" type="h1" />
       <div class="pf-contentList">
         <div class="pf-columns">
           <img class="pf-portrait" src="/img/fra.png" alt="" />
 
           <p class="pf-facts">
-            <span>Let's get in touch!</span>
+            <span>Mettiamoci<br />in contatto!</span>
           </p>
         </div>
         <div class="pf-columns">
@@ -27,10 +27,7 @@
               LinkedIn
             </a>
             <br /><br />
-            <a
-              href="https://www.linkedin.com/in/francesca-da-forno-55312a119/"
-              target="_blank"
-            >
+            <a href="/profilo-francesca-cv-it.pdf" target="_blank">
               Curriculum<br />Vitae<DownloadIcon />
             </a>
           </p>

@@ -17,16 +17,18 @@
         <div class="pf-columns">
           <div class="pf-body sticky">
             <p>
-              Hello! I'm Francesca, a Visual & UI Designer with over 14 years of
-              experience. I create impactful landing pages, lead digital
-              initiatives, and organize team projects.<br /><br />I ensure that
-              clients are involved in every step of bringing their ideas and
-              graphic content to life. I excel at problem-solving, translating
-              client ideas into beautiful graphics, effective communication,
-              teamwork, and fostering creativity.<br /><br />I love engaging in
-              sports, traveling, reading, drawing, and watching fantasy movies.
-              These hobbies fuel me with fresh ideas and energy for my work. My
-              journey highlights my passion and dedication to design.
+              Ciao! Sono Francesca, una Visual & UI Designer con oltre 14 anni
+              di esperienza.<br /><br />Realizzo landing page d'impatto, guido
+              iniziative digitali e organizzo progetti di squadra. Mi assicuro
+              che i clienti siano coinvolti in ogni fase della realizzazione
+              delle loro idee e contenuti grafici.<br /><br />Eccello nella
+              risoluzione dei problemi, nella traduzione delle idee dei clienti
+              in grafiche ad hoc per loro, nella comunicazione efficace, nel
+              lavoro di squadra e nella promozione della creatività.<br /><br />Amo
+              praticare sport, viaggiare, leggere, disegnare e guardare film
+              fantasy. Questi hobby mi forniscono nuove idee ed energia per il
+              mio lavoro. Il mio percorso evidenzia la mia passione e dedizione
+              per il design.
             </p>
           </div>
           <p class="pf-facts">

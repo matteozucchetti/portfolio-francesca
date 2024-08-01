@@ -5,10 +5,10 @@
     <NuxtLink
       to="/works"
       class="pf-tile works"
-      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Works')"
+      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Progetti')"
     >
       <div>
-        <h2>Works</h2>
+        <h2>Progetti</h2>
       </div>
     </NuxtLink>
 
@@ -25,10 +25,10 @@
     <NuxtLink
       to="/contacts"
       class="pf-tile contacts"
-      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Contacts')"
+      @mouseenter="(e) => !isMobile && onMouseOver(e, 'Contatti')"
     >
       <div>
-        <h2>Contacts</h2>
+        <h2>Contatti</h2>
       </div>
     </NuxtLink>
   </div>

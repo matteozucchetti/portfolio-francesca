@@ -1,7 +1,7 @@
 <template>
   <div class="pf-page">
     <div class="pf-content">
-      <Breadcrumb text="Works" type="h1" />
+      <Breadcrumb text="Progetti" type="h1" />
       <div class="pf-contentList">
         <ContentList path="/works" v-slot="{ list }">
           <div v-for="doc in list" :key="doc._path">

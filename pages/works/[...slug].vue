@@ -3,7 +3,7 @@
     <div class="pf-content">
       <ContentDoc :path="$route.path">
         <template v-slot="{ doc }">
-          <Breadcrumb :text="'WORKS | ' + doc.head" type="p" />
+          <Breadcrumb :text="'PROGETTI | ' + doc.head" type="p" />
           <div class="pf-contentList">
             <h1>{{ doc.head }}</h1>
             <h2>{{ doc.category }}</h2>
@@ -11,13 +11,13 @@
             <Back style="display: flex"></Back>
 
             <div class="pf-navigation">
-              <NuxtLink v-if="prev" :to="prev._path">Previous</NuxtLink>
+              <NuxtLink v-if="prev" :to="prev._path">Precedente</NuxtLink>
               <span v-if="prev && next">|</span>
-              <NuxtLink v-if="next" :to="next._path">Next</NuxtLink>
+              <NuxtLink v-if="next" :to="next._path">Prossimo</NuxtLink>
             </div>
           </div>
         </template>
-        <template #not-found> <h1>Document not found</h1> </template>
+        <template #not-found> <h1>Non trovato</h1> </template>
       </ContentDoc>
     </div>
   </div>
@@ -102,6 +102,17 @@ const [prev, next] = await queryContent()
     }
   }
 
+  :deep(h3) {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 40px;
+    line-height: 1.2;
+  }
+
   :deep(p) {
     color: #fff;
     font-family: Montserrat;
@@ -111,6 +122,69 @@ const [prev, next] = await queryContent()
     line-height: 120%;
     text-wrap: pretty;
     margin-bottom: 40px;
+  }
+}
+
+:deep(.pf-heading) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 60px 0 0;
+  padding: 0 60px;
+  gap: 240px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: Montserrat;
+  font-weight: 400;
+  @include mq($until: lg) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 40px 0 0;
+    padding: 0;
+  }
+  .pf-skills {
+    color: #616161;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 5.12px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    @include mq($until: lg) {
+      margin-bottom: 20px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120px;
+      width: 1px;
+      height: 100%;
+      background-color: #ffffff20;
+      @include mq($until: lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+:deep(.pf-text) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 0 120px;
+  padding: 0 60px;
+  gap: 240px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: Montserrat;
+  font-weight: 400;
+  @include mq($until: lg) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 0 0 80px;
+    padding: 0;
   }
 }
 
