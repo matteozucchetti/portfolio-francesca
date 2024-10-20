@@ -1,0 +1,59 @@
+@use "mq" as *;
+
+@mixin title {
+  font-family: Montserrat;
+  font-size: 46px;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+@mixin subtitle {
+  color: #616161;
+  font-family: Poppins;
+  font-size: 16px;
+  letter-spacing: 5.12px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.pf-page.project {
+  padding: 50px 100px;
+
+  @include mq($until: lg) {
+    padding: 20px;
+  }
+
+  h1 {
+    @include title;
+  }
+
+  .subtitle,
+  .skills {
+    @include subtitle;
+  }
+
+  .arrow {
+    @apply absolute bottom-12 right-12 transition-all duration-300 hover:scale-110;
+    @include mq($until: lg) {
+      @apply bottom-2 right-2 w-12;
+    }
+  }
+
+  h3 {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .skills {
+    color: #616161;
+    font-family: Poppins;
+    font-size: 16px;
+    letter-spacing: 5.12px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  video {
+    @apply rounded-[5px] lg:rounded-[20px];
+  }
+}

@@ -1,0 +1,28 @@
+@use "mq" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  .pf-page {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px 20px;
+    .pf-content {
+      background: #000;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      padding: 0 20px 20px;
+    }
+  }
+}

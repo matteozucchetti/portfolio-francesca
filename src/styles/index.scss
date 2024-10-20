@@ -1,0 +1,80 @@
+@use "mq" as *;
+
+.pf-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  pointer-events: none;
+  z-index: -1;
+  text-transform: uppercase;
+  filter: blur(3px);
+}
+.pf-grid {
+  display: grid;
+  grid-gap: 20px;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  padding: 20px;
+  transition: all 0.5s;
+  grid-template-areas: "works about" "works contacts";
+
+  @include mq($until: lg) {
+    grid-template-areas: "works" "about" "contacts";
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .pf-tile {
+    background: #40404070;
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    align-content: end;
+    justify-content: end;
+    transition: background 0.15s ease;
+    &:hover,
+    &:focus {
+      background: #20202070;
+    }
+
+    @include mq($until: lg) {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #fff;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+
+      span {
+        font-weight: 400;
+      }
+    }
+
+    &.works {
+      grid-area: works;
+    }
+
+    &.about {
+      grid-area: about;
+    }
+
+    &.contacts {
+      grid-area: contacts;
+    }
+  }
+}
