@@ -8,7 +8,7 @@
         {
           "type": "header",
           "key": "authorization",
-          "value": "Basic fra:antelao"
+          "value": "Basic ZnJhbmNlc2NhZGFmb3JubzphbnRlbGFv"
         }
       ]
     },
@@ -20,7 +20,7 @@
         {
           "type": "header",
           "key": "authorization",
-          "value": "Basic fra:antelao"
+          "value": "Basic ZnJhbmNlc2NhZGFmb3JubzphbnRlbGFv"
         }
       ]
     }
