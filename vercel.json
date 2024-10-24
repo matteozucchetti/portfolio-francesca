@@ -1,0 +1,27 @@
+{
+  "routes": [
+    {
+      "src": "/[^.]+",
+      "dest": "/",
+      "status": 200,
+      "has": [
+        {
+          "type": "header",
+          "key": "authorization",
+          "value": "Basic base64:ZnJhbmNlc2NhZGFmb3JubzphbnRlbGFv"
+        }
+      ]
+    },
+    {
+      "src": "/.*",
+      "status": 401,
+      "missing": [
+        {
+          "type": "header",
+          "key": "authorization",
+          "value": "Basic base64:ZnJhbmNlc2NhZGFmb3JubzphbnRlbGFv"
+        }
+      ]
+    }
+  ]
+}
