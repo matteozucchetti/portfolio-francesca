@@ -15,6 +15,7 @@
     {
       "src": "/.*",
       "status": 401,
+      "headers": { "www-authenticate": "Basic realm=\"staging\"" },
       "missing": [
         {
           "type": "header",
